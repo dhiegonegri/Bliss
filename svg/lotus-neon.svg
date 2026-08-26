@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 720" width="1000" height="720">
+  <title>Loto — receta del pétalo (Bézier cúbicas)</title>
+  <defs>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="b1"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6.5" result="b2"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="13" result="b3"/>
+      <feMerge><feMergeNode in="b3"/><feMergeNode in="b2"/><feMergeNode in="b1"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="bgGlow" cx="50%" cy="58%" r="42%">
+      <stop offset="0%" stop-color="#4de8ff" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="52%" stop-color="#3cf0ff" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#7a3cff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="fillP" cx="48%" cy="72%" r="78%">
+      <stop offset="0%" stop-color="#ff86ff" stop-opacity="0.50"/>
+      <stop offset="100%" stop-color="#120018" stop-opacity="0.05"/>
+    </radialGradient>
+    <radialGradient id="fillC" cx="52%" cy="72%" r="78%">
+      <stop offset="0%" stop-color="#7af8ff" stop-opacity="0.50"/>
+      <stop offset="100%" stop-color="#001018" stop-opacity="0.05"/>
+    </radialGradient>
+    <radialGradient id="fillM" cx="50%" cy="68%" r="72%">
+      <stop offset="0%" stop-color="#d8ffff" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#100018" stop-opacity="0.04"/>
+    </radialGradient>
+    <path id="pL" d="M 0,12 C -20,8 -52,-8 -74,-40 C -102,-80 -126,-128 -118,-178 C -108,-226 -62,-262 -8,-278 C -3,-280 0,-282 0,-282 C 3,-280 8,-278 8,-278 C 62,-262 108,-226 118,-178 C 126,-128 102,-80 74,-40 C 52,-8 20,8 0,12 Z"/>
+    <path id="pM" d="M 0,10 C -16,7 -40,-6 -56,-32 C -78,-64 -96,-102 -90,-142 C -82,-180 -48,-208 -6,-222 C -2,-224 0,-226 0,-226 C 2,-224 6,-222 6,-222 C 48,-208 82,-180 90,-142 C 96,-102 78,-64 56,-32 C 40,-6 16,7 0,10 Z"/>
+    <path id="pS" d="M 0,8 C -12,5 -28,-4 -38,-22 C -52,-46 -62,-74 -58,-102 C -52,-128 -30,-148 -4,-158 C -1,-160 0,-161 0,-161 C 1,-160 4,-158 4,-158 C 30,-148 52,-128 58,-102 C 62,-74 52,-46 38,-22 C 28,-4 12,5 0,8 Z"/>
+    <g id="fibL" fill="none" stroke-linecap="round">
+      <path d="M0,8 C0,-90 0,-190 0,-270"/>
+      <path d="M-16,10 C-40,-36 -58,-108 -54,-172 C-50,-214 -34,-246 -14,-266"/>
+      <path d="M16,10 C40,-36 58,-108 54,-172 C50,-214 34,-246 14,-266"/>
+      <path d="M-32,12 C-70,-12 -98,-74 -102,-126 C-104,-166 -88,-204 -50,-234"/>
+      <path d="M32,12 C70,-12 98,-74 102,-126 C104,-166 88,-204 50,-234"/>
+    </g>
+  </defs>
+  <rect width="1000" height="720" fill="#000"/>
+  <ellipse cx="500" cy="400" rx="340" ry="260" fill="url(#bgGlow)"/>
+  <g id="flor" transform="translate(500,458)" filter="url(#glow)">
+    <g transform="rotate(-78) translate(10,28)"><use href="#pL" fill="url(#fillP)" stroke="#e056ff" stroke-width="1.85" opacity="0.86"/><use href="#fibL" stroke="#ffb8ff" stroke-width="0.52" opacity="0.40"/></g>
+    <g transform="rotate(78) translate(-10,28)"><use href="#pL" fill="url(#fillC)" stroke="#40d8ff" stroke-width="1.85" opacity="0.86"/><use href="#fibL" stroke="#b8ffff" stroke-width="0.52" opacity="0.40"/></g>
+    <g transform="rotate(-56) translate(4,14)"><use href="#pL" fill="url(#fillP)" stroke="#ff62f0" stroke-width="2" opacity="0.90"/><use href="#fibL" stroke="#ffc8ff" stroke-width="0.55" opacity="0.45"/></g>
+    <g transform="rotate(56) translate(-4,14)"><use href="#pL" fill="url(#fillC)" stroke="#3ee8ff" stroke-width="2" opacity="0.90"/><use href="#fibL" stroke="#c8ffff" stroke-width="0.55" opacity="0.45"/></g>
+    <g transform="rotate(-28) translate(18,40)"><use href="#pL" fill="url(#fillP)" stroke="#ff4ae0" stroke-width="2.2" opacity="0.95"/><use href="#fibL" stroke="#ffd4ff" stroke-width="0.6" opacity="0.50"/></g>
+    <g transform="rotate(28) translate(-18,40)"><use href="#pL" fill="url(#fillC)" stroke="#2ad8ff" stroke-width="2.2" opacity="0.95"/><use href="#fibL" stroke="#d4ffff" stroke-width="0.6" opacity="0.50"/></g>
+    <g transform="rotate(-42) translate(2,2)"><use href="#pM" fill="url(#fillP)" stroke="#ff78ff" stroke-width="1.9" opacity="0.92"/></g>
+    <g transform="rotate(42) translate(-2,2)"><use href="#pM" fill="url(#fillC)" stroke="#66f0ff" stroke-width="1.9" opacity="0.92"/></g>
+    <g transform="rotate(-22) translate(0,-4)"><use href="#pM" fill="url(#fillM)" stroke="#ffa0ff" stroke-width="1.85" opacity="0.94"/></g>
+    <g transform="rotate(22) translate(0,-4)"><use href="#pM" fill="url(#fillM)" stroke="#88ffff" stroke-width="1.85" opacity="0.94"/></g>
+    <g transform="rotate(-11) translate(0,-12)"><use href="#pM" fill="url(#fillM)" stroke="#ffb8ff" stroke-width="1.75" opacity="0.95"/></g>
+    <g transform="rotate(11) translate(0,-12)"><use href="#pM" fill="url(#fillM)" stroke="#b8ffff" stroke-width="1.75" opacity="0.95"/></g>
+    <g transform="rotate(-26) translate(0,-2)"><use href="#pS" fill="#ff99ff" fill-opacity="0.24" stroke="#ffd8ff" stroke-width="1.5"/></g>
+    <g transform="rotate(26) translate(0,-2)"><use href="#pS" fill="#88ffff" fill-opacity="0.24" stroke="#d8ffff" stroke-width="1.5"/></g>
+    <g transform="rotate(-9) translate(0,-10)"><use href="#pS" fill="#aaffee" fill-opacity="0.26" stroke="#ffffff" stroke-width="1.4"/></g>
+    <g transform="rotate(9) translate(0,-10)"><use href="#pS" fill="#eeaaff" fill-opacity="0.24" stroke="#ffffff" stroke-width="1.4"/></g>
+    <g transform="rotate(0) translate(0,-14)"><use href="#pS" fill="#ffffff" fill-opacity="0.18" stroke="#ffffff" stroke-width="1.35"/></g>
+    <circle cx="0" cy="-92" r="74" fill="url(#core)" opacity="0.84"/>
+    <circle cx="0" cy="-90" r="17" fill="#fff" opacity="0.95"/>
+    <circle cx="0" cy="-90" r="6" fill="#fff"/>
+  </g>
+</svg>
