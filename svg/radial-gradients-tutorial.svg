@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" width="1000" height="720">
+  <defs>
+    <radialGradient id="basico" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#0088ff"/>
+    </radialGradient>
+    <radialGradient id="nucleo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="22%" stop-color="#d6ffff" stop-opacity="0.92"/>
+      <stop offset="52%" stop-color="#3cf0ff" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#7a3cff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="luzLateral" cx="50%" cy="50%" r="50%" fx="32%" fy="32%">
+      <stop offset="0%" stop-color="#ffe9a8"/>
+      <stop offset="45%" stop-color="#ff7a18"/>
+      <stop offset="100%" stop-color="#3a0a00"/>
+    </radialGradient>
+    <radialGradient id="anillo" cx="50%" cy="50%" r="50%" fr="28%">
+      <stop offset="0%" stop-color="#00ffff"/>
+      <stop offset="100%" stop-color="#001428"/>
+    </radialGradient>
+    <radialGradient id="bbox" gradientUnits="objectBoundingBox" cx="0.5" cy="0.7" r="0.75">
+      <stop offset="0%" stop-color="#ff86ff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#1a0028" stop-opacity="0.1"/>
+    </radialGradient>
+    <radialGradient id="user" gradientUnits="userSpaceOnUse" cx="780" cy="210" r="90">
+      <stop offset="0%" stop-color="#fff"/>
+      <stop offset="100%" stop-color="#6b00ff"/>
+    </radialGradient>
+    <radialGradient id="pad" cx="50%" cy="50%" r="30%" spreadMethod="pad">
+      <stop offset="0%" stop-color="#ff4ad2"/>
+      <stop offset="100%" stop-color="#1a0033"/>
+    </radialGradient>
+    <radialGradient id="repeat" cx="50%" cy="50%" r="18%" spreadMethod="repeat">
+      <stop offset="0%" stop-color="#66ffff"/>
+      <stop offset="100%" stop-color="#003355"/>
+    </radialGradient>
+    <radialGradient id="reflect" cx="50%" cy="50%" r="18%" spreadMethod="reflect">
+      <stop offset="0%" stop-color="#ffe566"/>
+      <stop offset="100%" stop-color="#663300"/>
+    </radialGradient>
+    <radialGradient id="elipse" cx="50%" cy="50%" r="50%" gradientTransform="scale(1 0.55) translate(0 80)">
+      <stop offset="0%" stop-color="#4de8ff" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1000" height="720" fill="#0b0b10"/>
+  <text x="40" y="46" fill="#eee" font-family="Georgia, serif" font-size="28">Gradientes radiales en SVG</text>
+  <g font-family="sans-serif" font-size="13" fill="#c8c8d0">
+    <circle cx="130" cy="190" r="70" fill="url(#basico)"/>
+    <text x="130" y="280" text-anchor="middle">1. básico</text>
+    <circle cx="310" cy="190" r="70" fill="url(#nucleo)"/>
+    <text x="310" y="280" text-anchor="middle">2. varios stops</text>
+    <circle cx="490" cy="190" r="70" fill="url(#luzLateral)"/>
+    <text x="490" y="280" text-anchor="middle">3. fx fy</text>
+    <circle cx="670" cy="190" r="70" fill="url(#anillo)"/>
+    <text x="670" y="280" text-anchor="middle">4. fr</text>
+    <circle cx="850" cy="190" r="70" fill="url(#user)"/>
+    <text x="850" y="280" text-anchor="middle">5. userSpaceOnUse</text>
+    <rect x="60" y="340" width="140" height="140" rx="12" fill="url(#pad)"/>
+    <text x="130" y="506" text-anchor="middle">6a. pad</text>
+    <rect x="240" y="340" width="140" height="140" rx="12" fill="url(#repeat)"/>
+    <text x="310" y="506" text-anchor="middle">6b. repeat</text>
+    <rect x="420" y="340" width="140" height="140" rx="12" fill="url(#reflect)"/>
+    <text x="490" y="506" text-anchor="middle">6c. reflect</text>
+    <rect x="600" y="340" width="140" height="140" rx="12" fill="url(#bbox)"/>
+    <text x="670" y="506" text-anchor="middle">7. objectBoundingBox</text>
+    <ellipse cx="850" cy="410" rx="70" ry="38" fill="url(#elipse)"/>
+    <text x="850" y="506" text-anchor="middle">8. transform</text>
+  </g>
+</svg>
