@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Bliss — loto abriendo (5 s)</title>
+  <style>
+    html,body { margin:0; background:#000; color:#ccc; font-family:sans-serif; }
+    main { max-width:880px; margin:0 auto; padding:24px 16px 48px; }
+    h1 { font-weight:500; color:#eee; font-size:20px; }
+    p { line-height:1.45; font-size:14px; color:#9aa; }
+    video { width:100%; max-width:640px; background:#000; border-radius:8px; }
+    .err { color:#f88; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Bliss — capullo a flor (5 segundos)</h1>
+  <p>Pétalos abriendo y luz saliendo del centro hacia arriba. 5 s en bucle.</p>
+  <p id="status">Cargando preview…</p>
+  <video id="v" controls autoplay loop muted playsinline></video>
+</main>
+<script>
+(async () => {
+  const status = document.getElementById('status');
+  const video = document.getElementById('v');
+  const bases = [
+    '',
+    'https://raw.githubusercontent.com/dhiegonegri/Bliss/feat/add-bloom-video/media/',
+    'https://raw.githubusercontent.com/dhiegonegri/Bliss/main/media/'
+  ];
+  try {
+    let parts;
+    let lastErr;
+    for (const base of bases) {
+      try {
+        parts = await Promise.all([0,1].map(i =>
+          fetch(base + 'lotus-bloom.part' + i + '.b64').then(r => {
+            if (!r.ok) throw new Error(r.status);
+            return r.text();
+          })
+        ));
+        lastErr = null;
+        break;
+      } catch (e) { lastErr = e; }
+    }
+    if (!parts) throw lastErr;
+    video.src = 'data:video/mp4;base64,' + parts.join('').replace(/\s+/g,'');
+    status.textContent = '5 s · pétalos + haz de luz';
+  } catch (e) {
+    status.className = 'err';
+    status.textContent = 'Clona el repo y abre este HTML en local. ' + e;
+  }
+})();
+</script>
+</body>
+</html>

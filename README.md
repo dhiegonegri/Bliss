@@ -4,6 +4,10 @@ Flor de loto neón en vector (SVG), receta de pétalo con curvas de Bézier, gra
 
 Referencia visual: capullo → flor abierta, magenta a la izquierda y cian a la derecha, núcleo blanco.
 
+## Preview
+
+Abre [`media/lotus-bloom.html`](media/lotus-bloom.html) en el navegador (el MP4 va embebido en base64: pétalos abriendo + haz de luz hacia arriba, 5 s en bucle).
+
 ## Contenido
 
 ```
@@ -15,7 +19,7 @@ Referencia visual: capullo → flor abierta, magenta a la izquierda y cian a la 
 │   ├── bezier-svg-tutorial.svg   # Q / C / S y construcción del pétalo
 │   └── radial-gradients-tutorial.svg
 └── media/
-    └── lotus-bloom.mp4           # preview 5 s (si está en el repo)
+    └── lotus-bloom.html          # preview 5 s (video embebido)
 ```
 
 ## Receta del pétalo
@@ -73,7 +77,8 @@ Un tap vuelve a reproducir la animación.
 ## Cómo verlo
 
 - SVG: navegador, Figma o Inkscape
-- Animación: Xcode Preview, o el MP4 en `media/`
+- Animación: Xcode Preview, o `media/lotus-bloom.html` en el navegador
+- Código: `LotusBloomView.swift` (5 s, `easeOut`)
 
 ## Licencia
 
