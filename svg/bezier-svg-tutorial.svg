@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 920" width="1000" height="920">
+  <rect width="1000" height="920" fill="#0b0b10"/>
+  <text x="40" y="44" fill="#eee" font-family="Georgia, serif" font-size="28">Curvas de Bézier en vectores SVG</text>
+  <text x="40" y="70" fill="#7a7a88" font-family="sans-serif" font-size="14">Q / T = cuadrática     C / S = cúbica     el pétalo es una cadena de C</text>
+  <g transform="translate(40,110)">
+    <text x="0" y="0" fill="#cfd0d8" font-family="sans-serif" font-size="16">1. Cuadrática  Q x1 y1 x y</text>
+    <line x1="40" y1="160" x2="180" y2="20" stroke="#445" stroke-dasharray="4 3"/>
+    <line x1="320" y1="160" x2="180" y2="20" stroke="#445" stroke-dasharray="4 3"/>
+    <path d="M40,160 Q180,20 320,160" fill="none" stroke="#66f0ff" stroke-width="3"/>
+    <circle cx="40" cy="160" r="6" fill="#fff"/>
+    <circle cx="320" cy="160" r="6" fill="#fff"/>
+    <circle cx="180" cy="20" r="7" fill="#ff4ae0"/>
+  </g>
+  <g transform="translate(420,110)">
+    <text x="0" y="0" fill="#cfd0d8" font-family="sans-serif" font-size="16">2. Cúbica  C x1 y1 x2 y2 x y</text>
+    <line x1="40" y1="160" x2="80" y2="20" stroke="#445" stroke-dasharray="4 3"/>
+    <line x1="320" y1="160" x2="280" y2="20" stroke="#445" stroke-dasharray="4 3"/>
+    <path d="M40,160 C80,20 280,20 320,160" fill="none" stroke="#ff7aff" stroke-width="3"/>
+    <circle cx="40" cy="160" r="6" fill="#fff"/>
+    <circle cx="320" cy="160" r="6" fill="#fff"/>
+    <circle cx="80" cy="20" r="7" fill="#ff4ae0"/>
+    <circle cx="280" cy="20" r="7" fill="#3cf0ff"/>
+  </g>
+  <g transform="translate(40,340)">
+    <text x="0" y="0" fill="#cfd0d8" font-family="sans-serif" font-size="16">3. Continuación suave S / T</text>
+    <path d="M20,130 C20,40 120,40 120,130 S220,220 320,130 S420,40 520,130" fill="none" stroke="#c8ffff" stroke-width="3"/>
+  </g>
+  <g transform="translate(40,560)">
+    <text x="0" y="0" fill="#cfd0d8" font-family="sans-serif" font-size="16">4. Receta del pétalo</text>
+    <path transform="translate(200,280) scale(0.7)" d="M0,12 C-18,10 -48,-6 -70,-36 C-96,-72 -118,-118 -112,-168 C-106,-214 -64,-250 -8,-268 C-3,-270 0,-272 0,-272 C0,-272 3,-270 8,-268 C64,-250 106,-214 112,-168 C118,-118 96,-72 70,-36 C48,-6 18,10 0,12 Z" fill="#ff7aff" fill-opacity="0.12" stroke="#ff7aff" stroke-width="2.4"/>
+    <text x="430" y="80" fill="#cfd0d8" font-family="sans-serif" font-size="13">1 M base  2 C hombro  3 C vientre  4 C punta  5 espejo X</text>
+  </g>
+</svg>
